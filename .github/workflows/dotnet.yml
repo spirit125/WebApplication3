@@ -27,7 +27,7 @@ jobs:
     - name: Build
       run: 
         dotnet build
-  
+        
     - name: Publish
       run: 
         dotnet publish --no-restore --no-build --configuration Release --output ./publish
