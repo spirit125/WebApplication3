@@ -20,17 +20,9 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    - name: Restore
-      run: 
-        dotnet restore
-
-    - name: Build
-      run: 
-        dotnet build
-        
     - name: Publish
       run: 
-        dotnet publish --no-restore --no-build --configuration Release --output ./publish
+        dotnet publish --configuration Release --output ./publish
 
     - name: Publish Artifact
       uses: actions/upload-artifact@v2
